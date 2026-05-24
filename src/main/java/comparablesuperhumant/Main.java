@@ -22,5 +22,24 @@ public class Main {
 
         comparablesuperhumant.SuperVillain.addSuperVillain(new ArrayList<>(List.of(superVillain, superVillain2, superVillain3)));
         System.out.println(SuperVillain.getVillianSet());
+
+
+        comparablesuperhumant.SuperHero superHero = new comparablesuperhumant.SuperHero();
+        superHero.setName("Супер кот");
+        superHero.setSuperPower("делать супер мяу");
+        superHero.setNameCompany("Американовита");
+
+        comparablesuperhumant.SuperHero superHero2 = new comparablesuperhumant.SuperHero();
+        superHero2.setName("Супер мышь");
+        superHero2.setSuperPower("Способность какать");
+        superHero2.setNameCompany("Влатоскака");
+
+        comparablesuperhumant.SuperHero superHero3 = new comparablesuperhumant.SuperHero();
+        superHero3.setName("Супер ворон");
+        superHero3.setSuperPower("Расколдовывать людей");
+        superHero3.setNameCompany("Бенуа");
+
+        comparablesuperhumant.SuperHero.addSuperHero(new ArrayList<>(List.of(superHero, superHero2, superHero3)));
+        System.out.println(SuperHero.getSuperHeroSet());
     }
 }
