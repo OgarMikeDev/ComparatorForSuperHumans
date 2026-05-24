@@ -1,3 +1,5 @@
+package comparablesuperhuman;
+
 import java.util.Objects;
 
 public abstract class SuperHuman implements Comparable<SuperHuman> {

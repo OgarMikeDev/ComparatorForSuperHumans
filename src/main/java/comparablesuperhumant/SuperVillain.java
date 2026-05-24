@@ -1,8 +1,11 @@
+package comparablesuperhumant;
+
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class SuperVillain extends SuperHuman {
+public class SuperVillain extends SuperHuman<Integer> {
     private static Set<SuperVillain> villianSet = new TreeSet<>();
     private int countCrime;
 
@@ -23,8 +26,21 @@ public class SuperVillain extends SuperHuman {
     }
 
     @Override
-    public int getVarForSorted() {
-        return countCrime;
+    public Integer getVarForSorted() {
+        return getCountCrime();
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null || getClass() != object.getClass()) return false;
+        if (!super.equals(object)) return false;
+        SuperVillain that = (SuperVillain) object;
+        return countCrime == that.countCrime;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), countCrime);
     }
 
     @Override
